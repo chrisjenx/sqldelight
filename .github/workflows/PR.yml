@@ -61,7 +61,7 @@ jobs:
       - name: Setup gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          cache-disabled: matrix.job == 'instrumentation'
+          cache-disabled: ${{ matrix.job == 'instrumentation' }}
 
       # Linux tests
       - name: Run gradle tests
